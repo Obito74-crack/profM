@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
             
 
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 151, 247, 122)),
         useMaterial3: true,
       ),
       home: Scaffold(
@@ -23,13 +23,34 @@ class MyApp extends StatelessWidget {
         
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         
-        title: Text("ProfM"),
-      ),
-      body:
+        title: const Text("ProfM"),
+       ),
+       body:const Column(
+        mainAxisAlignment:MainAxisAlignment.start,
+        children:[
+          Text(
+            "Bienvenue dans super prof Mobile",
+            style: TextField.materialMisspelledTextStyle,
+            
+            
+            
+          ),
+         Text(
+            "Simplifiez la recherche de votre repetiteur en un seul clic",
+            style: TextField.materialMisspelledTextStyle,
+            
+            
+            
+          )
+          
+        ],
+       )
+
      
-    ),
+     ),
     );
   }
 }
+
 
 
